@@ -132,7 +132,7 @@ export default class SwipeRating extends Component {
     const { position } = this.state;
     const { imageSize, ratingCount, type } = this.props;
 
-    const backgroundColor = TYPES[type].backgroundColor;
+    const backgroundColor = ratingBackgroundColor || TYPES[type].backgroundColor;
 
     const width = position.x.interpolate(
       {
